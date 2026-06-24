@@ -96,7 +96,17 @@ A dedicated pivot_summary.xlsx file was generated to answer core business questi
 
 - Chronological Trends: Sum of valid sales plotted chronologically by month (Jan-Dec) to track seasonal performance.
 # 8. Key business insights
+Top Performing Region: The South region generated the highest overall calculated sales, totaling ₹ 2,165,320.33
 
+Margin Efficiency: While the small business segment generated high volume, the consumer segment actually yielded the highest average profit margin at 29%.
+
+Logistics/Fulfillment: Standard class is overwhelmingly the most utilized shipping method, handling 242 total orders.
+
+Revenue Leakage: The company experienced 140 total failed or refunded orders.
 # 9. Assumptions and limitations
 
+Assumptions: We assumed a maximum logical discount of 50%; anything higher was flagged as a data-entry error. We also assumed that conflicting duplicates (same order ID, different products/prices) required manual management review and could not be algorithmically deleted.
+
+Limitations: The cleaning logic was built natively in Excel. Since it is not a scripted pipeline (like SQL or Python), importing a new batch of raw data requires manually copying down the calculated formulas and re-applying the "Paste as Values" locking mechanism. Furthermore, the system flags conflicting duplicates but cannot autonomously determine which row is the "true" record.
 # 10. Screenshots included
+cleaned_data_preview.png, raw_data_preview.png, pivot_summary_1.png and pivot_summary_2.png
